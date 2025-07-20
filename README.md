@@ -29,7 +29,7 @@ Your input `.csv` file must have the following **columns with exact header names
 Receipt,Last Name,Transaction Timestamp (UTC)
 https://business.uber.com/receipt/abc123,Smith,2025-07-01T14:22:33Z
 https://business.uber.com/receipt/def456,Brown,2025-07-02T09:33:36Z
-
+```
 🚫 The app will fail if:
 
 Any of these columns are missing or renamed
@@ -45,7 +45,7 @@ After login, the app will save session cookies to your local system so you won�
 
 All receipts will be downloaded as PDFs and saved in your selected folder. Files are named using:
 
-<Last Name>_<Timestamp>.pdf
+<Last Name>_<Timestamp>.pdf  
 Example:
 
 Smith_2025-07-01_14-22-33.pdf
@@ -54,8 +54,8 @@ Smith_2025-07-01_14-22-33.pdf
 
 Session cookies are stored locally at:
 
-~/.uber_receipts_cookies.pkl
-To clear login and force re-authentication, simply delete that file.
+~/.uber_receipts_cookies.pkl  
+To clear login and force re-authentication, simply delete that file.  
 
 ## 💬 Troubleshooting
 
@@ -68,5 +68,5 @@ To clear login and force re-authentication, simply delete that file.
 
 ## 🧑‍💻 Author
 
-Created by Josh Spodick
+Created by Josh Spodick  
 Open to contributions & feature requests!
