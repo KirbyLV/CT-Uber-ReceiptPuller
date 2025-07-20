@@ -30,6 +30,23 @@ Receipt,Last Name,Transaction Timestamp (UTC)
 https://business.uber.com/receipt/abc123,Smith,2025-07-01T14:22:33Z
 https://business.uber.com/receipt/def456,Brown,2025-07-02T09:33:36Z
 ```
+
+The following header is from a working Uber downlaoded CSV file:  
+```CSV
+Trip/Eats ID,Transaction Timestamp (UTC),Request Date (UTC),Request Time (UTC),Request Date (Local),Request Time (Local),Drop-off Date (UTC),Drop-off Time (UTC),Drop-off Date (Local),Drop-off Time (Local),Request Timezone Offset from UTC,First Name,Last Name,Email,Employee ID,Service,City,Distance (mi),Duration (min),Pickup Address,Drop-off Address,Expense Code,Expense Memo,Invoices,Program,Group,Payment Method,Transaction Type,Fare in Local Currency (excl. Taxes),Taxes in Local Currency,Tip in Local Currency,Transaction Amount in Local Currency (incl. Taxes),Local Currency Code,Fare in USD (excl. Taxes),Taxes in USD,Tip in USD,Transaction Amount in USD (incl. Taxes),"Estimated Service and Technology Fee (incl. Taxes, if any) in USD",Invoice Number,Deductions in Local Currency,Network Transaction Id,IsGroupOrder,Fulfilment Type,Country,Cancellation type,Membership Savings(Local Currency),Receipt
+
+```
+You must ensure to remove any blank lines, additional header lines, or lines with dash values. For example, the following will NOT work:
+```
+ompany:,Creative Technology
+Administrator:,
+Report Date:,2025-07-18 15:49:37.304747439 +0000 UTC 49=+37.304747439
+
+Transactions
+Trip/Eats ID,Transaction Timestamp (UTC),Request Date (UTC),Request Time (UTC),Request Date (Local),Request Time (Local),Drop-off Date (UTC),Drop-off Time (UTC),Drop-off Date (Local),Drop-off Time (Local),Request Timezone Offset from UTC,First Name,Last Name,Email,Employee ID,Service,City,Distance (mi),Duration (min),Pickup Address,Drop-off Address,Expense Code,Expense Memo,Invoices,Program,Group,Payment Method,Transaction Type,Fare in Local Currency (excl. Taxes),Taxes in Local Currency,Tip in Local Currency,Transaction Amount in Local Currency (incl. Taxes),Local Currency Code,Fare in USD (excl. Taxes),Taxes in USD,Tip in USD,Transaction Amount in USD (incl. Taxes),"Estimated Service and Technology Fee (incl. Taxes, if any) in USD",Invoice Number,Deductions in Local Currency,Network Transaction Id,IsGroupOrder,Fulfilment Type,Country,Cancellation type,Membership Savings(Local Currency),Receipt
+
+```
+
 🚫 The app will fail if:
 
 Any of these columns are missing or renamed
